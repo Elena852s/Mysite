@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSV Consulting GmbH</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      color: white;
+    }
+
+    body {
+      background-color: #111;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px 50px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 18px;
+    }
+
+    section {
+      width: 100%;
+      min-height: 100vh;
+      padding: 100px 80px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1759429084833-334282cbd58d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-family: 'Times New Roman', serif;
+      font-size: 60px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 24px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .about {
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .about img {
+      max-width: 50%;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      font-size: 20px;
+      max-width: 50%;
+    }
+
+    .services, .benefits, .process {
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: space-around;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 30%;
+      font-size: 18px;
+      text-align: left;
+    }
+
+    .contacts {
+      background-color: #000;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .contacts .left {
+      font-size: 22px;
+      max-width: 50%;
+    }
+
+    @media (max-width: 1024px) {
+      .card {
+        max-width: 100%;
+      }
+
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text, .about img {
+        max-width: 100%;
+      }
+
+      .contacts {
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .contacts .left {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header>
+    <div style="font-size: 20px; font-weight: bold;">LSV Consulting GmbH</div>
+    <nav>
+      <a href="#start">Start</a>
+      <a href="#about">Über uns</a>
+      <a href="#services">Leistungen</a>
+      <a href="#benefits">Vorteile</a>
+      <a href="#process">Ablauf</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Главный экран -->
+  <section class="hero" id="start">
+    <div class="hero-content">
+      <h1>LSV Consulting GmbH</h1>
+      <p>Professionelle Unterstützung für Unternehmen und Investoren: Wir kombinieren fundierte Expertise im Bereich Business Support Services mit tiefgreifender Beratung im Immobiliensektor. Ihre Vision ist unser Projekt.</p>
+    </div>
+  </section>
+
+  <!-- Про нас -->
+  <section class="about" id="about">
+    <div class="about-text">
+      <h2 class="section-title">Wer wir sind</h2>
+      <p>LSV Consulting GmbH ist ein dynamisches Beratungsunternehmen mit Fokus auf operative Unternehmensunterstützung und strategische Immobilienberatung. Unser Team vereint wirtschaftliches Denken mit praxisnaher Umsetzung. Wir begleiten unsere Kunden bei der Expansion, Restrukturierung und Investition – von der Idee bis zur Realisierung.</p>
+      <p>Mit einem Sitz in Pforzheim und einem internationalen Netzwerk sind wir der Partner für mittelständische Unternehmen und institutionelle Investoren gleichermaßen.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1758519289013-9442fb2aeac6?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Über uns Bild" />
+  </section>
+
+  <!-- Сервисы -->
+  <section class="services" id="services">
+    <h2 class="section-title">Was wir anbieten</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Business Support Services</h3>
+        <p>Individuelle Unterstützung bei administrativen, strategischen und organisatorischen Aufgaben. Wir entlasten Ihr Tagesgeschäft und schaffen Raum für Wachstum.</p>
+      </div>
+      <div class="card">
+        <h3>Immobilienberatung</h3>
+        <p>Ob Ankauf, Entwicklung oder Management – wir begleiten Sie bei komplexen Immobilienprojekten mit Marktkenntnis und unternehmerischem Weitblick.</p>
+      </div>
+      <div class="card">
+        <h3>Investorenservices</h3>
+        <p>Von Due Diligence bis Projektbetreuung: Wir sind der operative Arm für Investoren, die auf Effizienz und Vertrauen setzen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="benefits" id="benefits">
+    <h2 class="section-title">Warum LSV Consulting?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Erfahrung & Kompetenz</h3>
+        <p>Jahre praktische Erfahrung in Unternehmens- und Immobilienberatung. Wir sprechen nicht nur, wir handeln.</p>
+      </div>
+      <div class="card">
+        <h3>Verlässlichkeit</h3>
+        <p>Diskret, termintreu und lösungsorientiert – das sind unsere Prinzipien bei jedem Projekt.</p>
+      </div>
+      <div class="card">
+        <h3>Individuelle Ansätze</h3>
+        <p>Keine Standardlösungen: Wir hören zu, analysieren und entwickeln maßgeschneiderte Strategien.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Процесс -->
+  <section class="process" id="process">
+    <h2 class="section-title">So arbeiten wir</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Analyse & Beratung</h3>
+        <p>Wir verstehen Ihre Ziele und analysieren den Status quo, um fundierte Handlungsempfehlungen zu geben.</p>
+      </div>
+      <div class="card">
+        <h3>2. Planung & Strategie</h3>
+        <p>Gemeinsam erarbeiten wir einen realistischen, auf Sie zugeschnittenen Umsetzungsplan.</p>
+      </div>
+      <div class="card">
+        <h3>3. Umsetzung & Begleitung</h3>
+        <p>Wir begleiten Sie aktiv durch alle Projektphasen und stehen als verlässlicher Partner zur Seite.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contacts" id="contact">
+    <div class="left">
+      <h2 class="section-title">Kontaktieren Sie uns</h2>
+      <p>Wir freuen uns, mit Ihnen in Kontakt zu treten. Schreiben Sie uns eine E-Mail und wir melden uns umgehend.</p>
+      <p>Ob Projektidee, Zusammenarbeit oder Investitionsvorhaben – wir sind bereit.</p>
+      <br/>
+      <p><strong>Adresse:</strong> Strietweg 1, 75181 Pforzheim</p>
+      <p><strong>E-Mail:</strong> <a href="mailto:office@lsvconsulting.agency" style="color: #fff; text-decoration: underline;">office@lsvconsulting.agency</a></p>
+    </div>
+    <div class="right"></div>
+  </section>
+
+</body>
+</html>
